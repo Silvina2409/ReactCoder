@@ -6,7 +6,7 @@ function NavBar (){
             <h2> Furniture Tienda de Muebles</h2>
 
             <div>
-                <ul className="prueba">
+                <ul>
                 
                     <li> Mesas </li>
                     <li> Sillas</li>
