@@ -10,7 +10,7 @@ function NavBar (){
                 
                     <li> Mesas </li>
                     <li> Sillas</li>
-                    <li> Sofas</li>
+                    <li> Sillones</li>
                 </ul>
                 <CartWidget />
             </div>
