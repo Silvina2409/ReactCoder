@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Item = ({nombre,precio,stock}) => {
+const Item = ({id,nombre,imagen, precio,stock}) => {
   return (
     <div>
         <header>
@@ -8,7 +9,9 @@ const Item = ({nombre,precio,stock}) => {
                 {nombre}
             </h2>
         </header>    
-      
+        <div>
+            <img src= {imagen} alt={nombre} />
+        </div>
 
         <section>
             <p>
@@ -20,7 +23,8 @@ const Item = ({nombre,precio,stock}) => {
         </section>
 
         <footer>
-            <button> Ver detalle </button>
+            <Link to= {`/item/${id}`} > Ver detalle </Link>
+                        
         </footer>    
        
     </div>
