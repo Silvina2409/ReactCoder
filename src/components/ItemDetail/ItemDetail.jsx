@@ -1,19 +1,33 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import styles from './ItemDetail.module.css'
+
 
 
 const ItemDetail = ({item}) => {
+    const [quantityAdded, setQuantityAdded] = useState(0)
+    const handleOnAdd = (quantity) =>{
+        setQuantityAdded (quantity)
+    }
   return (
     <div>
         <div>
-        <h3> {item.name} </h3>    
-        <img src= {item.image} alt={item.name} />
+        <h3 className={styles.nombre}> {item.name} </h3>    
+        <img className={styles.img}  src= {item.image} alt={item.name} />
         </div>
         <div>
-            <p> Descripción: {item.description} </p>
-            <p> Precio: ${item.price} </p>
-            <p> Categoría: {item.categoria} </p>
-            <p>Stock: {item.stock } </p>
+            <p className= {styles.descripcion} >  {item.description} </p>
+            <p className= {styles.precio}> Precio: ${item.price} </p>
+            <p className= {styles.stock} >Stock: {item.stock } </p>
         </div>
+        <footer>
+            {
+            quantityAdded > 0 ? (
+                <Link to = '/' > Terminar Compra </Link>) : (<ItemCount initial = {1} stock = {item.stock} onAdd = {handleOnAdd } />) 
+            }
+        </footer>
     </div>
   )
 }
@@ -35,9 +49,7 @@ export default ItemDetail
 
 
 
-/*import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
+/*
 import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ name, image, category, price, description, stock}) => {

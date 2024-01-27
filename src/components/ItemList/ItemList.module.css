@@ -1,0 +1,9 @@
+.itemList{
+        padding: 50px;
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+    
+        
+    
+}

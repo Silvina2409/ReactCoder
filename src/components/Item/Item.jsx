@@ -1,22 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from './Item.module.css'
 
 
 const Item = ({producto}) => {
     
   return (
     <div>
-         <h3> {producto.name }</h3>
-        <img src= {producto.image} />
-        <div>
+      <div className={styles.item}>
+           <h3 className={styles.nombre}> {producto.name }</h3>
+            <img className={styles.img} src= {producto.image} />
+           <p className={styles.precio}> Precio: ${producto.price} </p>
            
-            <p> Precio: ${producto.price} </p>
-            <p> Categoria: {producto.category} </p>
-            <Link to = {`/item/${producto.id}`}> Ver más</Link>
+            <Link className={styles.ver}  to = {`/item/${producto.id}`}> Ver más</Link>
 
         </div>
 
     </div>
+    
   )
 }
 

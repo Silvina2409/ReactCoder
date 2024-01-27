@@ -1,0 +1,19 @@
+.numero{
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+}
+.ItemCount{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.menos{
+    padding: 5px 10px;
+    font-size: 20px;
+
+}
+.botonAgregar{
+    font-size: 15px;
+    padding: 10px;
+}

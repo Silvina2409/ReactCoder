@@ -15,7 +15,7 @@ const datos = [
         category: "silla",
         image: "https://acdn.mitiendanube.com/stores/001/120/603/products/black-21-72b63a2c425f3ec46f16578225366011-480-0.webp",
         stock: 13,
-        description: "Medidas: Alto total: 74cm. Altura hasta el asiento: 37cm, Ancho: 58cm, Profundidad: 49cm. Tapizado en tela antimanchas. Color a eleccion, sujeto a disponibilidad."
+        description: "Medidas: Alto total: 74cm Altura hasta el asiento: 37cm Ancho: 58cm Profundidad: 49cm. Tapizado en tela antimanchas. Color a eleccion, sujeto a disponibilidad."
     },
     {
         id: "3",
