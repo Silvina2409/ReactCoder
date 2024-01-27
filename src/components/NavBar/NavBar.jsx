@@ -5,15 +5,14 @@ function NavBar (){
         <nav>
             
                
-            <Link to= "/">
-                 <h2> Furniture Tienda de Muebles </h2>
-
-            </Link>
+            <Link to= "/"> <h2> Furniture Tienda de Muebles </h2> </Link>
 
             <div>
-                <NavLink to = { "/categoria/mesa"} > Mesas </NavLink>
-                <NavLink to={ "/categoria/silla"} > Sillas</NavLink>
-                <NavLink to={ "/categoria/sillon"} > Sillones </NavLink>
+                <Link to= "/nosotros"> Nosotros</Link>
+                <Link to =  "/productos" > Productos </Link>
+                <Link to = "/productos/mesa" > Mesas </Link>
+                <Link to= "/productos/silla" > Sillas</Link>
+                <Link to= "/productos/sillon" > Sillones </Link>
             </div>            
             
             <CartWidget />
