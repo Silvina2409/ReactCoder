@@ -1,11 +1,41 @@
 import React from 'react'
+
+import styles from "./ItemCount.module.css"
+
+const ItemCount = ({handleRestar, handleSumar, cantidad, handleAgregar}) => {
+
+
+  return (
+    <div>
+        <div className={styles.ItemCount} >
+            <button className={styles.menos} onClick={handleRestar}> - </button>
+            <h4 className={styles.numero}> {cantidad} </h4>
+            <button className={styles.menos} onClick={handleSumar} > + </button>
+        
+        </div>    
+        <div>
+            <button className={styles.botonAgregar}onClick={handleAgregar}> Agregar al Carrito </button>
+        </div>
+
+    </div>
+  )
+}
+
+export default ItemCount
+
+
+
+
+
+
+/*import React from 'react'
 import { useState } from 'react'
 import styles from "./ItemCount.module.css"
 
-const ItemCount = ({stock,initial, onAdd}) => {
+const ItemCount = ({stock,initial, onAdd, item}) => {
     const [quantity, setQuantity] = useState (initial)
     const increment = () =>{
-        if (quantity < stock) {
+        if (quantity < item.stock) {
             setQuantity (quantity + 1)
         }
     }
@@ -30,4 +60,4 @@ const ItemCount = ({stock,initial, onAdd}) => {
   )
 }
 
-export default ItemCount
+export default ItemCount*/

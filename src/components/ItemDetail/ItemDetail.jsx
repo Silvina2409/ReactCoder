@@ -7,10 +7,18 @@ import styles from './ItemDetail.module.css'
 
 
 const ItemDetail = ({item}) => {
-    const [quantityAdded, setQuantityAdded] = useState(0)
-    const handleOnAdd = (quantity) =>{
-        setQuantityAdded (quantity)
+    
+    const [cantidad, setCantidad] = useState(1)
+    const handleRestar= () =>{
+        cantidad > 1 && setCantidad (cantidad - 1)
     }
+    const handleSumar = () => {
+        cantidad < item.stock  && setCantidad (cantidad +1 )
+    }
+    const handleAgregar = () => {
+        console.log ({...item, cantidad: cantidad})
+    }
+
   return (
     <div>
         <div>
@@ -22,12 +30,10 @@ const ItemDetail = ({item}) => {
             <p className= {styles.precio}> Precio: ${item.price} </p>
             <p className= {styles.stock} >Stock: {item.stock } </p>
         </div>
-        <footer>
-            {
-            quantityAdded > 0 ? (
-                <Link to = '/' > Terminar Compra </Link>) : (<ItemCount initial = {1} stock = {item.stock} onAdd = {handleOnAdd } />) 
-            }
-        </footer>
+        <div>
+            <ItemCount cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} handleAgregar={handleAgregar} />
+        </div>
+       
     </div>
   )
 }
@@ -36,8 +42,16 @@ export default ItemDetail
 
 
 
-
-
+   /* const [quantityAdded, setQuantityAdded] = useState(0)
+    const handleOnAdd = (quantity) =>{
+        setQuantityAdded (quantity)
+    }*/
+   /* <footer>
+    {
+    quantityAdded > 0 ? (
+        <Link to = '/' > Terminar Compra </Link>) : (<ItemCount item={item} initial = {1} stock = {item.stock} onAdd = {handleOnAdd } />) 
+    }
+</footer>*/
 
 
 
