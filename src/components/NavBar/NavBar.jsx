@@ -13,9 +13,11 @@ function NavBar (){
             <div className= {styles.lista}>
                 <Link className={styles.menulink} to= "/nosotros"> Nosotros</Link>
                 <Link className={styles.menulink} to =  "/productos" > Productos </Link>
+               
                 <Link  className={styles.menulink} to = "/productos/mesa" > Mesas </Link>
                 <Link className={styles.menulink} to= "/productos/silla" > Sillas</Link>
                 <Link className={styles.menulink}  to= "/productos/sillon" > Sillones </Link>
+                <Link className={styles.menulink} to =  "/contacto" > Contacto </Link>
                 <CartWidget />
             </div>            
             
