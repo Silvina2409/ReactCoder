@@ -10,7 +10,7 @@ const CartWidget = () => {
     <div>
         
         <Link  to =  "/carrito" > 
-        carrito
+        <img src= {cart} alt="imagen carrito de compras" />
         <span> {cantidadEnCarrito()} </span>
          </Link>
 
