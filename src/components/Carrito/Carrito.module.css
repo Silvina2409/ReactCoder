@@ -1,0 +1,37 @@
+.carrito1{
+    color: black
+}
+.carrito2{
+    text-decoration: none;
+    background-color: rgb(250, 181, 181);
+    color: black;
+    padding: .7rem;
+    width: max-content;
+    border-radius: .5rem;
+    transition: .2s;
+    font-size: 15px;
+   
+    
+}
+.carrito3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.carrito4{
+    text-decoration: none;
+    background-color: rgb(250, 181, 181);
+    color: black;
+    padding: .7rem;
+    width: max-content;
+    border-radius: .5rem;
+    transition: .2s;
+    font-size: 20px;
+    border: black;
+}
+.carrito5{
+    color: black;
+    padding: 100px;
+    font-size: 20px;
+}

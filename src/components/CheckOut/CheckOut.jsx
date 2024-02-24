@@ -4,6 +4,7 @@ import { CartContext } from '../../Context/CartContext'
 import { useForm } from 'react-hook-form'
 import { collection, addDoc } from 'firebase/firestore'
 import { db } from '../../firebase/config'
+import styles from "./CheckOut.module.css"
 
 const CheckOut = () => {
     const {carrito, precioTotal, vaciarCarrito} = useContext(CartContext)
@@ -26,22 +27,22 @@ const CheckOut = () => {
       })
     }
     if (pedidoId) {
-      return ( <div> 
-        <h3> Muchas gracias por tu compra</h3>
-        <h4> Tu número de pedido es: {pedidoId} </h4>
+      return ( <div className= {styles.CheckOut5}> 
+        <h3 className= {styles.CheckOut1}> Muchas gracias por su compra</h3>
+        <h4 className= {styles.CheckOut1} > Su número de pedido es: {pedidoId} </h4>
       </div>)
     }
-  
+ 
     return (
    
-    <div>
-    <h3> Finalizar Compra</h3>
-    <form onSubmit={handleSubmit(comprar)} >
-      <input type='text' placeholder='Ingrese su nombre' {...register ("nombre")} /> 
-      <input type="email" placeholder='Ingrese su E-Mail'{...register ("email")} />
-      <button type='submit'> COMPRAR </button>
-        </form>
-    </div>
+    <div className= {styles.CheckOut5}>
+      <h3 className= {styles.CheckOut1}> Finalizar Compra</h3>
+      <form onSubmit={handleSubmit(comprar)} className= {styles.CheckOut4} >
+        <input className= {styles.CheckOut2}  type='text' placeholder='Ingrese su nombre' {...register ("nombre")} /> 
+        <input className= {styles.CheckOut2} type="email" placeholder='Ingrese su E-Mail'{...register ("email")} />
+        <button type='submit' className= {styles.CheckOut3}> COMPRAR </button>
+      </form>
+   </div>
   )
 }
 

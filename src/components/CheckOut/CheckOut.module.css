@@ -1,0 +1,28 @@
+.CheckOut1{
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+}
+.CheckOut2{
+    padding: 15px;
+}
+.CheckOut3{
+    background-color: rgb(250, 181, 181);
+    color: black;
+    padding: .7rem;
+    width: max-content;
+    border-radius: .5rem;
+    transition: .2s;
+    font-size: 20px;
+    border: black;
+}
+
+.CheckOut4{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+.CheckOut5{
+    padding-bottom: 500px;
+}

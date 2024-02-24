@@ -31,7 +31,7 @@ const ItemDetail = ({item}) => {
         <div>
             <p className= {styles.descripcion} >  {item.description} </p>
             <p className= {styles.precio}> Precio: ${item.price} </p>
-            <p className= {styles.stock} >Stock: {item.stock } </p>
+            <p className= {styles.stock} > Stock: {item.stock } </p>
         </div>
         <div>
             <ItemCount cantidad={cantidad} handleSumar={handleSumar} handleRestar={handleRestar} handleAgregar={() => {agregarAlCarrito (item, cantidad)}} />
@@ -45,16 +45,6 @@ export default ItemDetail
 
 
 
-   /* const [quantityAdded, setQuantityAdded] = useState(0)
-    const handleOnAdd = (quantity) =>{
-        setQuantityAdded (quantity)
-    }*/
-   /* <footer>
-    {
-    quantityAdded > 0 ? (
-        <Link to = '/' > Terminar Compra </Link>) : (<ItemCount item={item} initial = {1} stock = {item.stock} onAdd = {handleOnAdd } />) 
-    }
-</footer>*/
 
 
 
@@ -66,35 +56,3 @@ export default ItemDetail
 
 
 
-/*
-import { Link } from 'react-router-dom'
-
-const ItemDetail = ({ name, image, category, price, description, stock}) => {
-    const [quantityAdded, setQuantityAdded] = useState(0)
-    const handleOnAdd = (quantity) =>{
-        setQuantityAdded (quantity)
-    }
-  return (
-    <div>
-        <header> 
-            <h2> {name}  </h2>
-        </header>
-        <picture>
-            < img src= {image} alt = {name} />
-        </picture>
-        <section>
-            <p> Categoria: {category} </p>
-            <p> Descripción: {description} </p>
-            <p> Precio: ${price} </p>
-        </section>
-        <footer>
-            {
-            quantityAdded > 0 ? (
-                <Link to = '/cart' > Terminar Compra </Link>) : (<ItemCount initial = {1} stock = {stock} onAdd = {handleOnAdd } />) 
-            }
-        </footer>
-    </div>
-  )
-}
-
-export default ItemDetail*/
