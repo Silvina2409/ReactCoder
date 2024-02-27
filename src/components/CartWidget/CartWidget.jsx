@@ -20,14 +20,3 @@ const CartWidget = () => {
 
 export default CartWidget
 
-/*function CartWidget () {
-    return (
-        <div>
-            <img src= {cart} alt="imagen carrito de compras" />
-            0
-
-            <Link className={styles.menulink} to =  "/carrito" > Carrito </Link>
-        </div>
-    )
-}
-export default CartWidget*/
